@@ -1,0 +1,46 @@
+// @flow
+
+import {
+  normalizeSizeWithWidth,
+  normalizeSizeWithHeight,
+} from './utils';
+
+// for NumberPadButton
+export const BUTTON_CIRCLE_SIZE = normalizeSizeWithHeight(80);
+export const BUTTON_HEIGHT = normalizeSizeWithHeight(100);
+
+// for NumberPadIndicator
+export const INDICATOR_MAX_COUNT = 4;
+export const INDICATOR_SIZE = 16;
+export const INDICATOR_HALF_SIZE = INDICATOR_SIZE / 2;
+export const INDICATOR_PADDING_HORIZONTAL = normalizeSizeWithWidth(30);
+export const INDICATOR_MARGIN_HORIZONTAL = 10;
+export const INDICATOR_WIDTH = INDICATOR_SIZE + (INDICATOR_MARGIN_HORIZONTAL * 2);
+export const INDICATOR_HEIGHT = (INDICATOR_PADDING_HORIZONTAL * 2) + INDICATOR_SIZE;
+
+// for NumberPad
+export const BUTTON_CONTAINER_WIDTH = normalizeSizeWithWidth(340);
+export const BUTTON_WIDTH = BUTTON_CONTAINER_WIDTH / 3;
+export const BUTTON_PADDING_HORIZONTAL = (BUTTON_WIDTH - BUTTON_CIRCLE_SIZE) / 2;
+export const BUTTON_PADDING_VERTICAL = (BUTTON_HEIGHT - BUTTON_CIRCLE_SIZE) / 2;
+export const BUTTON_CIRCLE_HALF_SIZE = BUTTON_CIRCLE_SIZE / 2;
+
+export const INDICATOR_ANIMATION_SCALE = INDICATOR_SIZE / BUTTON_CIRCLE_SIZE;
+export const DIFFERENCE_BETWEEN_CIRCLE_INDICATOR = (BUTTON_CIRCLE_SIZE - INDICATOR_SIZE) / 2;
+export const INDICATOR_POSTION_LEFT_BASE = INDICATOR_MARGIN_HORIZONTAL - DIFFERENCE_BETWEEN_CIRCLE_INDICATOR + ((BUTTON_CONTAINER_WIDTH - (INDICATOR_WIDTH * INDICATOR_MAX_COUNT)) / 2);
+export const INDICATOR_POSTION_TOP_BASE = INDICATOR_PADDING_HORIZONTAL - DIFFERENCE_BETWEEN_CIRCLE_INDICATOR;
+
+// for hitSlop
+export const HITSLOP_SUMMARY = {
+  left: 64,
+  top: 64,
+  right: 64,
+  bottom: 64,
+};
+
+export const HITSLOP_PROGRESS_IMAGE = {
+  left: 32,
+  top: 32,
+  right: 32,
+  bottom: 32,
+};
